@@ -21,7 +21,19 @@
                                 <state key="normal" image="Microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVk-YJ-T0h"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsB-zo-dDG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="167" y="358" width="67" height="14"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -33,6 +45,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="2Bu-5q-b8B"/>
+                                <exclude reference="XsB-zo-dDG"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="82Z-m5-wCu"/>
@@ -44,6 +57,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="2Bu-5q-b8B"/>
+                                <include reference="XsB-zo-dDG"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="82Z-m5-wCu"/>
