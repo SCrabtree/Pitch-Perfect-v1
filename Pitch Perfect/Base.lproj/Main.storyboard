@@ -25,48 +25,85 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVk-YJ-T0h"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsB-zo-dDG">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsB-zo-dDG">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="Fcu-PE-3L0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="167" y="358" width="67" height="14"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fcu-PE-3L0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Fcu-PE-3L0"/>
+                                    </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTV-wD-P0G">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9o9-nP-jRA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="2Bu-5q-b8B" secondAttribute="centerX" constant="-0.5" id="82Z-m5-wCu"/>
-                            <constraint firstAttribute="centerY" secondItem="2Bu-5q-b8B" secondAttribute="centerY" id="KFx-Ow-o8Z"/>
-                            <constraint firstAttribute="centerY" secondItem="2Bu-5q-b8B" secondAttribute="centerY" id="QfB-tv-fTT"/>
-                            <constraint firstAttribute="centerX" secondItem="2Bu-5q-b8B" secondAttribute="centerX" id="zpk-EY-RLu"/>
+                            <constraint firstItem="XsB-zo-dDG" firstAttribute="top" secondItem="2Bu-5q-b8B" secondAttribute="bottom" constant="8" symbolic="YES" id="NjX-eE-Axo"/>
+                            <constraint firstItem="XsB-zo-dDG" firstAttribute="top" secondItem="2Bu-5q-b8B" secondAttribute="bottom" constant="8" id="Nlo-fn-s1Z"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bTV-wD-P0G" secondAttribute="bottom" constant="48" id="QLx-fM-2t6"/>
+                            <constraint firstItem="2Bu-5q-b8B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vl5-ur-XAY"/>
+                            <constraint firstAttribute="centerX" secondItem="XsB-zo-dDG" secondAttribute="centerX" constant="-0.5" id="WeV-iO-har"/>
+                            <constraint firstItem="bTV-wD-P0G" firstAttribute="centerX" secondItem="XsB-zo-dDG" secondAttribute="centerX" id="Ys8-VK-vzc"/>
+                            <constraint firstItem="XsB-zo-dDG" firstAttribute="centerX" secondItem="2Bu-5q-b8B" secondAttribute="centerX" id="cCd-ur-R6w"/>
+                            <constraint firstItem="2Bu-5q-b8B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w5e-uI-MJ0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="2Bu-5q-b8B"/>
                                 <exclude reference="XsB-zo-dDG"/>
+                                <exclude reference="bTV-wD-P0G"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="82Z-m5-wCu"/>
-                                <exclude reference="KFx-Ow-o8Z"/>
-                                <exclude reference="QfB-tv-fTT"/>
-                                <exclude reference="zpk-EY-RLu"/>
+                                <exclude reference="Vl5-ur-XAY"/>
+                                <exclude reference="w5e-uI-MJ0"/>
+                                <exclude reference="NjX-eE-Axo"/>
+                                <exclude reference="Nlo-fn-s1Z"/>
+                                <exclude reference="WeV-iO-har"/>
+                                <exclude reference="cCd-ur-R6w"/>
+                                <exclude reference="Ys8-VK-vzc"/>
+                                <exclude reference="QLx-fM-2t6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="2Bu-5q-b8B"/>
                                 <include reference="XsB-zo-dDG"/>
+                                <include reference="bTV-wD-P0G"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="82Z-m5-wCu"/>
-                                <include reference="KFx-Ow-o8Z"/>
-                                <include reference="QfB-tv-fTT"/>
-                                <include reference="zpk-EY-RLu"/>
+                                <include reference="Vl5-ur-XAY"/>
+                                <include reference="w5e-uI-MJ0"/>
+                                <exclude reference="NjX-eE-Axo"/>
+                                <include reference="Nlo-fn-s1Z"/>
+                                <include reference="WeV-iO-har"/>
+                                <exclude reference="cCd-ur-R6w"/>
+                                <include reference="Ys8-VK-vzc"/>
+                                <include reference="QLx-fM-2t6"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="UIButton" destination="bTV-wD-P0G" id="MvO-sr-gQV"/>
+                        <outlet property="recordingInProgress" destination="XsB-zo-dDG" id="Y7R-Qn-Kc8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,5 +111,6 @@
     </scenes>
     <resources>
         <image name="Microphone" width="100" height="100"/>
+        <image name="stop" width="50" height="50"/>
     </resources>
 </document>
